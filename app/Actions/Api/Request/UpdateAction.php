@@ -3,10 +3,12 @@
 namespace App\Actions\Api\Request;
 
 use App\Http\Requests\Api\Request\UpdateRequest;
+use App\Mail\NotificationMail;
 use App\Models\Request;
 use Illuminate\Http\Response;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Log;
+use Illuminate\Support\Facades\Mail;
 
 class UpdateAction
 {

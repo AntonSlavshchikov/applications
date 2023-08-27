@@ -38,3 +38,14 @@ Route::middleware(['auth:sanctum'])
                 Route::get('requests', 'index');
             });
     });
+
+Route::middleware(['auth:sanctum'])
+    ->group(function () {
+        Route::controller(\App\Http\Controllers\Api\EmailMessageController::class)
+            ->group(function () {
+                Route::post('emails/send', 'send');
+                Route::get('emails', 'index');
+            });
+    });
+
+
