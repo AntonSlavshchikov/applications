@@ -2,12 +2,10 @@
 
 namespace App\Http\Requests\Api\Auth;
 
-use App\Traits\Request\ValidationErrorRequestTrait;
 use Illuminate\Foundation\Http\FormRequest;
 
 class RegisterRequest extends FormRequest
 {
-    use ValidationErrorRequestTrait;
     /**
      * Determine if the user is authorized to make this request.
      */

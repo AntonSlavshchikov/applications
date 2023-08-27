@@ -2,14 +2,12 @@
 
 namespace App\Http\Requests\Api\Request;
 
-use App\Traits\Request\ValidationErrorRequestTrait;
 use Illuminate\Contracts\Validation\Validator;
 use Illuminate\Foundation\Http\FormRequest;
 use Illuminate\Http\Exceptions\HttpResponseException;
 
 class CreateRequest extends FormRequest
 {
-    use ValidationErrorRequestTrait;
     /**
      * Determine if the user is authorized to make this request.
      */

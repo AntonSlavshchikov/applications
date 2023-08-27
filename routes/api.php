@@ -34,5 +34,7 @@ Route::middleware(['auth:sanctum'])
             ->group(function () {
                 Route::post('requests', 'create')
                     ->withoutMiddleware('auth:sanctum');
+                Route::put('requests/{id}', 'update');
+                Route::get('requests', 'index');
             });
     });
