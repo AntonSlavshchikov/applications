@@ -29,16 +29,4 @@ class CreateRequest extends FormRequest
             'message' => 'required|min:10'
         ];
     }
-
-    public function messages()
-    {
-        return [
-            'name.required' => 'Required field!',
-            'name.string' => 'The field must be of the type email',
-            'email.required' => 'Required field!',
-            'email.email' => 'The field must be of the type string!',
-            'message.required' => 'Required field!',
-            'message.min' => 'Minimum number of characters 10',
-        ];
-    }
 }

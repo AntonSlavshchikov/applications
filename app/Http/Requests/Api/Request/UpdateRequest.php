@@ -4,7 +4,6 @@ namespace App\Http\Requests\Api\Request;
 
 use App\Models\Enums\Request\StatusEnum;
 use Illuminate\Foundation\Http\FormRequest;
-use Illuminate\Validation\Rule;
 use Illuminate\Validation\Rules\Enum;
 
 class UpdateRequest extends FormRequest
@@ -25,16 +24,8 @@ class UpdateRequest extends FormRequest
     public function rules(): array
     {
         return [
-            'status' => 'required',
+            'status' => ['required', new Enum(StatusEnum::class)],
             'comment' => 'required_if:status,===,Resolved'
-        ];
-    }
-
-    public function messages()
-    {
-        return [
-            'status.required' => 'Required field!',
-            'comment.required_if' => 'Add comment!',
         ];
     }
 }

@@ -27,18 +27,4 @@ class RegisterRequest extends FormRequest
             'password' => 'required|min:8|confirmed',
         ];
     }
-
-    public function messages()
-    {
-        return [
-            'name.required' => 'Required field!',
-            'name.string' => 'The field must be of the type string!',
-            'name.min' => 'Minimum number of characters 8!',
-            'email.required' => 'Required field!',
-            'email.email' => 'The field must be of the type email!',
-            'password.required' => 'Required field!',
-            'password.min' => 'Minimum number of characters 8',
-            'password.confirmed' => 'Passwords dont match!',
-        ];
-    }
 }

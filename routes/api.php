@@ -23,8 +23,8 @@ Route::middleware(['auth:sanctum'])
                     ->withoutMiddleware('auth:sanctum');
                 Route::post('login', 'login')
                     ->withoutMiddleware('auth:sanctum');
-                Route::post('me');
-                Route::post('logout');
+                Route::get('me', 'me');
+                Route::post('logout', 'logout');
             });
     });
 

@@ -26,14 +26,4 @@ class LoginRequest extends FormRequest
             'password' => 'required|min:8',
         ];
     }
-
-    public function messages()
-    {
-        return [
-            'email.required' => 'Required field!',
-            'email.email' => 'The field must be of the type string!',
-            'password.required' => 'Required field!',
-            'password.min' => 'Minimum number of characters 8',
-        ];
-    }
 }

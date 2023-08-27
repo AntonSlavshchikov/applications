@@ -56,7 +56,8 @@ class AuthController extends Controller
      */
     public function logout(): Response
     {
-        Auth::logout();
+        auth()->user()->currentAccessToken()->delete();
+        auth()->guard('web')->logout();
         return response(null, 204);
     }
 }
